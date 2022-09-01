@@ -1,0 +1,133 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<style>
+    .Ajustes {
+        font-size: 20px;
+        text-align: center;
+        border: 2px solid;
+        border-color: yellow;
+        
+    }
+
+    .corAzul {
+        color: blue;
+    }
+
+    .alinhar {
+    }
+
+    .botao {
+        font-size: 30px;
+        color: blue;
+        border-color: blue;
+    }
+</style>
+
+@using (Html.BeginForm("Dados", "Home", FormMethod.Post))
+{
+
+    <div>
+        <img src="/Content/imagens/download (1).png" style="width:500px; height:70px;" />
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <label class="corAzul">Nome</label>
+                <input class="Ajustes alinhar nome form-control" type="text" name="Nome" />
+            </div>
+            <div class="col-5">
+                <label class="corAzul">Idade</label>
+                <input class="Ajustes form-control" type="number" name="Idade" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <label class="corAzul">CPF</label>
+                <input class="Ajustes  form-control" type="number" name="Cpf" />
+            </div>
+            <div class="col-5">
+                <label class="corAzul">Estado Civíl</label>
+                <input class="Ajustes  form-control" type="text" name="EstadoCivil" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="corAzul">Nome De Tratamento</label>
+                <input class="Ajustes form-control" type="text" name="NomeDeTratamento" />
+
+            </div>
+            <div class="col">
+                <label class="corAzul">Documento De Identidade</label>
+                <input class="Ajustes form-control" type="text" name="DocumentoDeIdentidade" />
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="corAzul">Gênero</label>
+            </div>
+            <div>
+                <label class="corAzul">Masculino</label>
+                <input class="Ajustes" type="radio" name="Sexo" value="masculino" />
+            
+
+            
+                <label class="corAzul">Feminino</label>
+                <input class="Ajustes" type="radio" name="Sexo" value="feminino" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="corAzul">Escolaridade</label>
+                <input class="Ajustes form-control" type="text" name="Escolaridade" />
+            </div>
+            <div class="col">
+                <label class="corAzul">Formação Acadêmica</label>
+                <input class="Ajustes form-control" type="text" name="FormaçãoAcademica" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="corAzul">Conclucao(mês/Ano)</label>
+                <input class="Ajustes  form-control" type="date" name="ConclucaoMmesAno" />
+
+            </div>
+            <div class="col">
+                <label class="corAzul">Formacao Academica em Andamento</label>
+                <input class="Ajustes  form-control" type="text" name="FormacaoAcademicaemAndamento" />
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="corAzul">CNPJ da Escola</label>
+                <input class="Ajustes  form-control" type="text" name="CNPJdaEscola" />
+            </div>
+            <div class="col">
+                <label class="corAzul">Previsao de conclução</label>
+                <input class="Ajustes  form-control" type="date" name="Previsaodeconcluçao" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="corAzul">DDD</label>
+                <input class="Ajustes  form-control" type="text" name="DDD" />
+            </div>
+            <div class="col">
+                <label class="corAzul">Telefone</label>
+                <input class="Ajustes  form-control" type="text" name="Telefone" />
+
+            </div>
+            <div class="col">
+                <label class="corAzul">Email</label>
+                <input class="Ajustes  form-control" type="text" name="Email" />
+
+            </div>
+        </div>
+        <div class="row">
+            <input class="botao" type="submit" value="EnviarDados" />
+        </div>
+    </div>
+}
